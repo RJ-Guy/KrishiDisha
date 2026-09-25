@@ -163,6 +163,8 @@ This project is built using an **Autonomous Multi-Agentpair-programming framewor
 | **`backend_database_agent`** | Lead Backend Engineer & DB Architect | `/BACKEND_DATABASE_AGENT` | `Backend/` |
 | **`ml_data_pipeline_agent`** | ML & Temporal Data Pipeline Engineer | `/ML_DATA_PIPELINE_AGENT` | `Backend/ml/` |
 | **`business_logic_agent`** | Algorithmic & Economic Logic Engineer | `/BUSINESS_LOGIC_AGENT` | `Backend/app/services/` |
+| **`schemas_agent`** | Pydantic Schemas & Data Contract Engineer | `/SCHEMAS_AGENT` | `Backend/app/schemas/` |
+| **`models_agent`** | SQLAlchemy ORM & Database Models Engineer | `/MODELS_AGENT` | `Backend/app/models/` |
 
 ---
 
