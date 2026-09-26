@@ -179,19 +179,33 @@ This project is built using an **Autonomous Multi-Agentpair-programming framewor
 
 ### 1. Backend Setup (FastAPI)
 
-```bash
-# Navigate to the backend directory
-cd Backend
+#### Option A: Using `uv` (Recommended — 10x faster)
 
+```bash
+# Sync dependencies and create virtual environment
+uv sync
+
+# Run database migrations and seed demonstration data
+uv run python -m app.database.seed_data
+
+# Start the FastAPI server with reload
+uv run uvicorn app.main:app --reload --port 8000
+```
+
+#### Option B: Using standard `venv` & `pip`
+
+```bash
 # Create and activate a virtual environment
-python -m venv venv
+python -m venv .venv
 # On Windows:
-.\venv\Scripts\activate
+.\.venv\Scripts\activate
 # On Linux/macOS:
-source venv/bin/activate
+source .venv/bin/activate
 
 # Install dependencies
-pip install fastapi uvicorn sqlalchemy psycopg2-binary pydantic python-jose passlib python-multipart pandas scikit-learn
+pip install -e .
+# Or directly:
+pip install fastapi "uvicorn[standard]" sqlalchemy psycopg2-binary pydantic "python-jose[cryptography]" "passlib[bcrypt]" python-multipart pandas scikit-learn httpx requests
 
 # Run database migrations / seed data
 python -m app.database.seed_data

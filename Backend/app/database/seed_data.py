@@ -719,7 +719,7 @@ def seed_database():
         ingested_count = ingest_kaggle_mandi_csv(db, raw_dir="data/raw", max_records=10000)
         logger.info(f"Ingested {ingested_count} records from Kaggle CSVs.")
 
-    print("✓ KrishiDisha database initialized and seeded successfully!")
+    print("[OK] KrishiDisha database initialized and seeded successfully!")
 
 
 if __name__ == "__main__":
